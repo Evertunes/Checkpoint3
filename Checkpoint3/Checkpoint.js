@@ -60,10 +60,10 @@ let curso = {
     let aluno = this.listaDeEstudante[aprov];
     return aluno.faltas < this.maxFaltas &&
       aluno.mediaNotas() >= this.notaAprovacao
-      ? "Aprovado"
+      ? true
       : aluno.mediaNotas() >= this.notaAprovacao * 1.1
-      ? "Aprovado"
-      : "Reprovado";
+      ? true
+      : false;
   },
   listaAprovacao() {
     let listaAprov = [];
